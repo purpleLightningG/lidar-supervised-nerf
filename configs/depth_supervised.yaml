@@ -1,5 +1,5 @@
-# baseline.yaml — Vanilla NeRF, RGB-only photometric loss.
-# Inherits all paths and model settings from default.yaml.
+# depth_supervised.yaml — NeRF with LiDAR depth supervision loss.
+# Identical to baseline.yaml except for the loss configuration and output dir.
 
 data:
   sequence_dir: "C:/Users/Dream Team/Desktop/nerf/2011_09_26/2011_09_26_drive_0005_sync"
@@ -29,9 +29,9 @@ training:
   save_every: 25000
 
 loss:
-  use_depth_supervision: false
-  depth_weight: 0.0
+  use_depth_supervision: true
+  depth_weight: 0.001
   coarse_weight: 1.0
 
 output:
-  dir: "outputs/baseline"
+  dir: "outputs/depth_supervised"

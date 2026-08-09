@@ -1,11 +1,10 @@
-# baseline.yaml — Vanilla NeRF, RGB-only photometric loss.
-# Inherits all paths and model settings from default.yaml.
+# default.yaml — Shared settings for both baseline and depth-supervised training.
 
 data:
   sequence_dir: "C:/Users/Dream Team/Desktop/nerf/2011_09_26/2011_09_26_drive_0005_sync"
   calib_dir:    "C:/Users/Dream Team/Desktop/nerf/2011_09_26"
   depth_cache_dir: "outputs/depth_cache"
-  val_stride: 8
+  val_stride: 8  # every 8th frame held out for evaluation
 
 model:
   num_pos_freqs: 10
@@ -24,14 +23,6 @@ training:
   num_iterations: 200000
   rays_per_iter: 1024
   learning_rate: 5.0e-4
-  lr_decay: 0.95
-  lr_decay_every: 10000
+  lr_decay: 0.95          # exponential decay factor
+  lr_decay_every: 10000   # apply decay every N iterations
   save_every: 25000
-
-loss:
-  use_depth_supervision: false
-  depth_weight: 0.0
-  coarse_weight: 1.0
-
-output:
-  dir: "outputs/baseline"
