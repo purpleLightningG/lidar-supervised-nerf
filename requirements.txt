@@ -1,0 +1,10 @@
+torch>=2.0
+numpy
+pillow
+matplotlib
+pyyaml
+tqdm
+tensorboard
+scikit-image
+lpips  # for perceptual quality metric (optional but recommended)
+imageio  # for GIF generation
