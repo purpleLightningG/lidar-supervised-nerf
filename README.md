@@ -1,7 +1,7 @@
 # LiDAR-Supervised NeRF on Driving Scenes
 
 <p align="center">
-  <img src="assets/comparison.gif" alt="Baseline vs LiDAR-supervised NeRF" width="800"/>
+  <img src="assets/comparison_depth.gif" alt="Baseline vs LiDAR-supervised NeRF" width="800"/>
 </p>
 
 <p align="center">
